@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a chat application frontend built using React, with support for both single-user and multi-user modes.
 
-## Available Scripts
+## Single & Multi-User User Module
 
-In the project directory, you can run:
+### Description
 
-### `npm start`
+> The single-user module allows one user to send messages. It's a basic chat interface where messages are displayed in chronological order.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> The multi-user module allows multiple users to send and receive messages. It includes features for distinguishing between users and displaying messages from different users in the chat interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features
 
-### `npm test`
+- Send messages in real-time.
+- View messages in chronological order.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Setup
 
-### `npm run build`
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run the commend:
+   ```bash
+   npm install react-scripts
+   ```
+5. Run `npm start` to start the development server.
+6. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the Single user application, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. For single-user mode, import and render the `<App_single/>` component in the `index.js` module.
 
-### `npm run eject`
+   ```jsx
+   import React from "react";
+   import ReactDOM from "react-dom";
+   import App_single from "./App_single";
+   import "./index.css";
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ReactDOM.render(
+     <React.StrictMode>
+       <App_single />
+     </React.StrictMode>,
+     document.getElementById("root")
+   );
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the Multi user application, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. For Multi-user mode, import and render the `<App/>` component in the `index.js` module.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```jsx
+   import React from "react";
+   import ReactDOM from "react-dom";
+   import App from "./App";
+   import "./index.css";
 
-## Learn More
+   ReactDOM.render(
+     <React.StrictMode>
+       <App />
+     </React.StrictMode>,
+     document.getElementById("root")
+   );
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- JavaScript (ES6)
+- CSS
 
-### Code Splitting
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was created by <a href="https://github.com/mukilan88" target="_blank">Mukilan Selvaraj</a>.
